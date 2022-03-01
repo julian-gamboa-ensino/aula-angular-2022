@@ -841,7 +841,12 @@
 
           this.nova_etiqueta = ''; ////////////////////
 
-          this.nome_pasta = [];
+          this.nome_pasta = [//carro pequeno
+          'lavagem semanal', 'abastecimento de gasolina', 'emergencia de infraçao', 'ocorrência de furto', '', //carro grande
+          'lavagem mensal', 'abastecimento de diesel', 'comboios planejados', 'ocorrência de roubo', '', //hoje
+          'despanhante matutino', 'despanhante tarde', 'despanhante noite', 'conciliação bancária', '', //saida oficina
+          'lavagem e aprimoramentos', 'fiscal de contrato', 'coleta de orçamentos e notas', 'divida das peças', 'divida dos serviços', '', //
+          'lavagem semanal', 'abastecimento de gasolina', 'emergencia de infraçao', 'ocorrência de furto', '', 'lavagem semanal', 'abastecimento de gasolina', 'emergencia de infraçao', 'ocorrência de furto', ''];
         } //event handler for the select element's change event
 
 
