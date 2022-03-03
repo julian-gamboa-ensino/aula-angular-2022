@@ -9,6 +9,14 @@ const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./swagger.yaml');
 
+/******************************************************
+Funcionalidades próprias do sistema
+*******************************************************/
+var person = require('./etiquetas/amanha/amanha/Function.js');//require('./Person.js');var amanha = 
+
+/******************************************************
+ *  
+*******************************************************/
 
 var app = express();
 
@@ -58,6 +66,7 @@ const pasta_FOTOS_novas = './passo_1';
 const url_FOTOS_novas = 'passo_1';
 const pasta_ETIQUETAS = './etiquetas/';
 const local_index="./fotos-comentarios"
+const local_configuracoes=pasta_ETIQUETAS
 
 
 ///////////////////////// Funções Auxiliares /////////////////////////////
@@ -354,6 +363,8 @@ function atendendo_componente(req, res, next) {
         stream_pastas_locais.pipe(res);
     });
 
+    lendo_configuracao(req,res);
+
 //Em caso de ERRO deve-se liberar para o seguinte:
     stream_pastas_locais.on('error', function (err) {
         res.send("Erro função (atendendo_componente) "+req.path);
@@ -363,6 +374,47 @@ function atendendo_componente(req, res, next) {
 /******************************************************
  *  
 *******************************************************/
+
+function lendo_configuracao(req,res)
+{    
+    var dir = path.join(__dirname, local_configuracoes); 
+    var previo_file = path.join(dir, req.path+'/configuracao.json');
+
+var person1 = new person('James', 'Bond');
+console.log(person1.fullName());
+    
+    fs.readFile(previo_file, 'utf8' , (err, data) => {
+        if (err) {
+            //console.error("err");
+          //console.error(err)
+          return
+        }
+//console.log(data)
+        try {
+            let myArray = JSON.parse(data);
+            //console.log(myArray)
+        } catch (exc) {
+            console.log('Invalido json:', exc);
+        }
+
+      })
+
+
+
+}
+
+/******************************************************
+     if (err) throw err;
+
+    // This is very important! Whenever you parse a JSON, you have to use try/catch
+    try {
+        let myArray = JSON.parse(data);
+        console.log(myArray.map(item => item.message);
+    } catch (exc) {
+        console.log('Invalid json:', exc);
+    }
+*******************************************************/
+
 
 function entregando_png(req, res, next) {    
 
@@ -375,7 +427,6 @@ function entregando_png(req, res, next) {
 
 function entregando_json(req, res, next) {    
 
-    console.log(req.path);
 
     next();
     //lendo_json(req, res, next,"etiquetas");
