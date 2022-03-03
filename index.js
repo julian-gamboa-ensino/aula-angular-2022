@@ -108,6 +108,8 @@ function ENDPOINTS() {
     filesNames.forEach(element => {        
         // PNGs
         app.get("/"+element+"/*.png", entregando_png); //
+// JSON contendo as configurações de cada funcionalidade
+app.get("/"+element+"/*.json", entregando_json); 
         //Listado para cada etiqueta
         app.get("/"+element, lista_fotos_etiquetas);
         //Atendendo um componente de Angular
@@ -120,6 +122,8 @@ function ENDPOINTS() {
 
 //Index
     app.get("/", entregando_index);
+//PNG.TXT entregando_PNG_TXT; Mas serão evitados os "png.txt"
+app.get("/*.json",entregando_json);
 //PNG.TXT entregando_PNG_TXT; Mas serão evitados os "png.txt"
     app.get("/*.png.txt",entregando_PNG_TXT);
 //Complementos do Index 
@@ -154,8 +158,14 @@ function lista_fotos_etiquetas(req, res, next) {
             return endereco_local.replace(completo_pasta_FOTOS,base_url);
         }
     )
-    
-    res.json(lista_arquivos);
+//Diversos filtros
+    const sem_PNG_TXT = lista_arquivos.filter(
+        element => !(element.includes(".txt") || element.includes(".json"))
+        );
+//console.log(sem_PNG_TXT);
+
+    res.json(sem_PNG_TXT);
+   
 }
 
 /******************************************************
@@ -192,7 +202,7 @@ function lista_fotos_novas(eq, res, next)
     )
 
     const sem_PNG_TXT = lista_arquivos.filter(
-        element => !element.includes(".txt")
+        element => !(element.includes(".txt") || element.includes(".json"))
         );
 
     res.json(sem_PNG_TXT);
@@ -360,6 +370,50 @@ function entregando_png(req, res, next) {
 }
 
 /******************************************************
+ *  Cada funcionalidade terá 
+*******************************************************/
+
+function entregando_json(req, res, next) {    
+
+    console.log(req.path);
+
+    next();
+    //lendo_json(req, res, next,"etiquetas");
+}
+
+
+/******************************************************
+ *  
+*******************************************************/
+
+function lendo_json(req, res, next,complemento_endereco) {
+    var dir = path.join(__dirname, complemento_endereco); 
+    var previo_file = path.join(dir, req.path.replace(/\/$/, '/index.html'));   
+
+    decodificando_endereco_url=querystring.parse(previo_file);
+    file=Object.keys(decodificando_endereco_url)[0];  
+
+    var type = mime[path.extname(file).slice(1)] || 'text/plain';
+
+//console.log(file);
+
+//Envio do arquivo por PIPE
+    var stream_pastas_locais = fs.createReadStream(file);
+
+    stream_pastas_locais.on('open', function () {
+        res.set('Content-Type', type);
+        stream_pastas_locais.pipe(res);
+    });
+
+//Em caso de ERRO deve-se liberar para o seguinte:
+    stream_pastas_locais.on('error', function (err) {
+        res.statusCode=404;
+        res.send("(March 2022) Erro função (entregando JSON) "+req.path);
+        //next();
+    });
+}
+
+/******************************************************
  *  
 *******************************************************/
 
@@ -371,6 +425,8 @@ function lendo_png(req, res, next,complemento_endereco) {
     file=Object.keys(decodificando_endereco_url)[0];  
 
     var type = mime[path.extname(file).slice(1)] || 'text/plain';
+
+//    console.log(file);
 
     
 //Envio do arquivo por PIPE
@@ -393,9 +449,11 @@ function lendo_png(req, res, next,complemento_endereco) {
 ///////////////////////// FIM  
 
 /*
-app.listen(80, function () {
-    console.log('Listening on http://localhost:31/novo/novo');
-});
+Para 
+    Heroku, 
+    ECS
+    AWS
+http://${HOST}:${PORT}`);
  
  */
 

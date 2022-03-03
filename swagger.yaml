@@ -9,7 +9,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-host: 'https://docker-2-julian.herokuapp.com/'
+host: 'docker-2-julian.herokuapp.com/'
 tags:
   - name: Exemplo de "NodeJS e Angular"
     description: Integrando Front-End BackEND
