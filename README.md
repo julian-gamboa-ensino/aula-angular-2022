@@ -1,6 +1,6 @@
 # Aula básica de Angular (laboratório 1)
 
-testando o ip da Ec2 
+automação do IP no index e no angular
 
 console.log("lista_pastas Muito Delay"
 
