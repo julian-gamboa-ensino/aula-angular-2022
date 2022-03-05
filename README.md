@@ -1,5 +1,7 @@
 # Aula básica de Angular (laboratório 1)
 
+https://stackoverflow.com/questions/3653065/get-local-ip-address-in-node-js
+
 automação do IP no index e no angular
 
 console.log("lista_pastas Muito Delay"

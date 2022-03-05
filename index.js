@@ -9,6 +9,9 @@ const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./swagger.yaml');
 
+var ip = require("ip");
+
+
 /******************************************************
 Funcionalidades próprias do sistema
 *******************************************************/
@@ -86,10 +89,16 @@ function getFiles (dir, files_){
     }
     return files_;
 }
-  
+
+
+function obtendo_ip_maquina() {
+    console.dir ( ip.address() );
+}
+
 ///////////////////////// Rotas /////////////////////////////
 
 /////////////////////// Colocando de forma dinâmica os ENDPOINTS ////
+obtendo_ip_maquina();
 ENDPOINTS();
 
 function ENDPOINTS() {
