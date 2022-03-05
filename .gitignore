@@ -1,0 +1,6 @@
+#.gitignore
+Dockerfile
+maquina-antiga
+EC2_maquina-antiga
+node_modules
+# shell.sh

@@ -156,11 +156,11 @@ function lista_fotos_etiquetas(req, res, next) {
 
     pasta_especifica = path.join(completo_pasta_FOTOS,nome_etiqueta); 
     
-    //const base_url="http://localhost:31/"; //${PORT}
+    const base_url="http://localhost:3000/"; //${PORT}
 
     //const base_url=`http://${HOST}:${PORT}`;
 
-    const base_url=`https://docker-2-julian.herokuapp.com/`;
+    //const base_url=`https://docker-2-julian.herokuapp.com/`;
 
     lista_arquivos=getFiles(pasta_especifica).map(
         function(endereco_local) {
@@ -193,9 +193,9 @@ function lista_fotos_novas(eq, res, next)
     const filesNames = dirents.filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
-    //const base_url="http://localhost:3001/"+url_FOTOS_novas;
+    const base_url="http://localhost:3000/"+url_FOTOS_novas;
 
-    const base_url="https://docker-2-julian.herokuapp.com/"+url_FOTOS_novas;
+    //const base_url="https://docker-2-julian.herokuapp.com/"+url_FOTOS_novas;
     
     lista_arquivos=[];
 
