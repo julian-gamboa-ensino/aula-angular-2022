@@ -294,7 +294,7 @@ function lista_pastas(req, res, next) {
 
 function entregando_index(req, res, next) {
 
-console.log(req.path+"  "+entregando_index+" "+HOST);
+console.log(req.path+"  entregandoIndex "+HOST);
     
     var dir = path.join(__dirname, local_index); 
     
