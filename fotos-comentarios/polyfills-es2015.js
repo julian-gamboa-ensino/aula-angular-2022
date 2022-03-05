@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/maquina-antiga/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/EC2_maquina-antiga/src/polyfills.ts */"hN/g");
 
 
 /***/ }),

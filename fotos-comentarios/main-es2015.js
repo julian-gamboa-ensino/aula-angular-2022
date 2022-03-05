@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/maquina-antiga/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/EC2_maquina-antiga/src/main.ts */"zUnb");
 
 
 /***/ }),
@@ -153,6 +153,17 @@ class NovosComponent {
         this.maximo_indice_imagen = 0;
         this.imagem = [];
     }
+    /*
+    Quando for procurado (https://docker-2-julian.herokuapp.com/saida_oficina/saida_oficina)
+    ele vai coletar o parametro da URL
+    
+    (  { path: ':parametro/:parametro'<----------------------------,
+  )
+    Lembremos da definicao do APP-ROUTING.MODULE.TS:
+  
+      { path: ':parametro/:parametro', component: NovosComponent },
+  
+     */
     ngOnInit() {
         const par = this.activatedRoute.snapshot.paramMap.get('parametro');
         this.etiqueta = par + "";
@@ -219,7 +230,7 @@ NovosComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "\nvisualiza\u00E7\u00E3o de notas fiscais, multas, etc..");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "\nDemo em Heroku");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "\nDemo em Ec2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -437,36 +448,6 @@ class SelectClassificadorComponent {
             'abastecimento de gasolina',
             'emergencia de infraçao',
             'ocorrência de furto',
-            '',
-            //carro grande
-            'lavagem mensal',
-            'abastecimento de diesel',
-            'comboios planejados',
-            'ocorrência de roubo',
-            '',
-            //hoje
-            'despanhante matutino',
-            'despanhante tarde',
-            'despanhante noite',
-            'conciliação bancária',
-            '',
-            //saida oficina
-            'lavagem e aprimoramentos',
-            'fiscal de contrato',
-            'coleta de orçamentos e notas',
-            'divida das peças',
-            'divida dos serviços',
-            '',
-            //
-            'lavagem semanal',
-            'abastecimento de gasolina',
-            'emergencia de infraçao',
-            'ocorrência de furto',
-            '',
-            'lavagem semanal',
-            'abastecimento de gasolina',
-            'emergencia de infraçao',
-            'ocorrência de furto',
             ''
         ];
     }
@@ -550,12 +531,11 @@ __webpack_require__.r(__webpack_exports__);
 Serviço SIMPLES para consultar uma API que lista-se as fotos contidas num bucker
 */
 class GetFotosBucketService {
+    //"https://docker-2-julian.herokuapp.com/";
     // injetando o HttpClient
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.url = 
-        //"http://localhost:31/";
-        "https://docker-2-julian.herokuapp.com/";
+        this.url = "http://localhost:3000/";
         // Headers
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': 'application/json' })
@@ -663,12 +643,11 @@ __webpack_require__.r(__webpack_exports__);
 Serviço SIMPLES para consultar uma API que lista-se as fotos contidas num bucker
 */
 class GetListaPastasService {
+    //"https://docker-2-julian.herokuapp.com/lista_pastas";
     // injetando o HttpClient
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.url = 
-        //  "http://localhost:31/lista_pastas";
-        "https://docker-2-julian.herokuapp.com/lista_pastas";
+        this.url = "http://localhost:3000/lista_pastas";
         // Headers
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': 'application/json' })
