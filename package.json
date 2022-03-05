@@ -24,8 +24,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "ip": "^1.1.5",
     "path": "^0.12.7",
+    "public-ip": "^5.0.0",
     "querystring": "^0.2.1",
     "swagger-ui-express": "^4.3.0",
     "yamljs": "^0.3.0"

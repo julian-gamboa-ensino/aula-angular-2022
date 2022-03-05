@@ -9,7 +9,6 @@ const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./swagger.yaml');
 
-var ip = require("ip");
 
 
 /******************************************************
@@ -92,7 +91,9 @@ function getFiles (dir, files_){
 
 
 function obtendo_ip_maquina() {
-    HOST= ip.address();
+    const myArgs = process.argv.slice(2);
+    //console.log('myArgs: ', myArgs);
+    HOST = myArgs[0];
     console.log(HOST);
 }
 
