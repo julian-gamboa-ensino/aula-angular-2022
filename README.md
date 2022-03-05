@@ -1,5 +1,7 @@
 # Aula básica de Angular (laboratório 1)
 
+console.log("lista_pastas Muito Delay"
+
 Estranho: existem problemas com um componente de nome `list.component.ts`
 
 Cognito: https://medium.com/@prasadjay/amazon-cognito-user-pools-in-nodejs-as-fast-as-possible-22d586c5c8ec
