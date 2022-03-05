@@ -30,7 +30,7 @@ var app = express();
 
 
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
+var HOST = '0.0.0.0';
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -92,7 +92,8 @@ function getFiles (dir, files_){
 
 
 function obtendo_ip_maquina() {
-    console.dir ( ip.address() );
+    HOST= ip.address();
+    console.log(HOST);
 }
 
 ///////////////////////// Rotas /////////////////////////////
@@ -165,11 +166,11 @@ function lista_fotos_etiquetas(req, res, next) {
 
     pasta_especifica = path.join(completo_pasta_FOTOS,nome_etiqueta); 
     
-    const base_url="http://18.231.69.246:3000/";
+    //const base_url="http://18.231.69.246:3000/";
 
     //const base_url="http://localhost:3000/"; //${PORT}
 
-    //const base_url=`http://${HOST}:${PORT}`;
+    const base_url=`http://${HOST}:${PORT}`;
 
     //const base_url=`https://docker-2-julian.herokuapp.com/`;
 
@@ -204,8 +205,9 @@ function lista_fotos_novas(eq, res, next)
     const filesNames = dirents.filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
-    
-    const base_url="http://18.231.69.246:3000/"+url_FOTOS_novas;
+    const base_url="http://${HOST}:${PORT}/"+url_FOTOS_novas;;
+
+    //const base_url="http://18.231.69.246:3000/"+url_FOTOS_novas;
 
     //const base_url="https://docker-2-julian.herokuapp.com/"+url_FOTOS_novas;
     
