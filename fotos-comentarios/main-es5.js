@@ -1038,7 +1038,7 @@
           _classCallCheck(this, GetFotosBucketService);
 
           this.httpClient = httpClient;
-          this.url = "http://18.231.69.246:3000"; //"http://localhost:3000/";
+          this.url = "http://18.231.69.246:3000/"; //"http://localhost:3000/";
           // Headers
 
           this.httpOptions = {
@@ -1250,7 +1250,7 @@
           _classCallCheck(this, GetListaPastasService);
 
           this.httpClient = httpClient;
-          this.url = "http://18.231.69.246:3000"; //"http://localhost:3000/lista_pastas";
+          this.url = "http://18.231.69.246:3000/lista_pastas"; //"http://localhost:3000/lista_pastas";
           // Headers
 
           this.httpOptions = {
