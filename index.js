@@ -171,7 +171,7 @@ function lista_fotos_etiquetas(req, res, next) {
 
     //const base_url="http://localhost:3000/"; //${PORT}
 
-    const base_url=`http://${HOST}:${PORT}`;
+    const base_url=`http://${HOST}:${PORT}/`;
 
     //const base_url=`https://docker-2-julian.herokuapp.com/`;
 
@@ -294,7 +294,7 @@ function lista_pastas(req, res, next) {
 
 function entregando_index(req, res, next) {
 
-//console.log(req.path)
+console.log(req.path+"  "+entregando_index+" "+HOST);
     
     var dir = path.join(__dirname, local_index); 
     
