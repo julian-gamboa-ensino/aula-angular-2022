@@ -1,6 +1,7 @@
 rm -r fotos-comentarios
 
 cd EC2_maquina-antiga
+touch t
 ng build
 mv dist/fotos-comentarios ..
 cd ..

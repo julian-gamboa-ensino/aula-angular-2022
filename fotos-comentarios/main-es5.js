@@ -156,7 +156,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "novo");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "sabado");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1243,13 +1243,13 @@
 
 
       var GetListaPastasService = /*#__PURE__*/function () {
-        //"https://docker-2-julian.herokuapp.com/lista_pastas";
         // injetando o HttpClient
         function GetListaPastasService(httpClient) {
           _classCallCheck(this, GetListaPastasService);
 
           this.httpClient = httpClient;
-          this.url = "http://localhost:3000/lista_pastas"; // Headers
+          this.url = //"http://localhost:3000/lista_pastas";
+          "https://docker-2-julian.herokuapp.com/lista_pastas"; // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({

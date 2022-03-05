@@ -72,7 +72,7 @@ ListaPastasComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "novo");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "sabado");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, ListaPastasComponent_li_9_Template, 3, 3, "li", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -643,11 +643,12 @@ __webpack_require__.r(__webpack_exports__);
 Serviço SIMPLES para consultar uma API que lista-se as fotos contidas num bucker
 */
 class GetListaPastasService {
-    //"https://docker-2-julian.herokuapp.com/lista_pastas";
     // injetando o HttpClient
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.url = "http://localhost:3000/lista_pastas";
+        this.url = 
+        //"http://localhost:3000/lista_pastas";
+        "https://docker-2-julian.herokuapp.com/lista_pastas";
         // Headers
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': 'application/json' })
