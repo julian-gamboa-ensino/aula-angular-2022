@@ -135,7 +135,7 @@
         selectors: [["app-lista-pastas"]],
         decls: 10,
         vars: 1,
-        consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "bg-dark", "fixed-top"], ["id", "navbarsExampleDefault", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item", "dropdown"], ["href", "", "id", "dropdown01", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["aria-labelledby", "dropdown01", 1, "dropdown-menu"], ["href", "./amanha/amanha", 1, "dropdown-item"], [4, "ngFor", "ngForOf"], [1, "dropdown-item", 3, "href"]],
+        consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "bg-dark", "fixed-top"], ["id", "navbarsExampleDefault", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item", "dropdown"], ["href", "", "id", "dropdown01", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["aria-labelledby", "dropdown01", 1, "dropdown-menu"], ["href", "./novo/novo", 1, "dropdown-item"], [4, "ngFor", "ngForOf"], [1, "dropdown-item", 3, "href"]],
         template: function ListaPastasComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
@@ -156,7 +156,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "sabado");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "novas fotos");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1243,13 +1243,13 @@
 
 
       var GetListaPastasService = /*#__PURE__*/function () {
+        //"https://docker-2-julian.herokuapp.com/lista_pastas";
         // injetando o HttpClient
         function GetListaPastasService(httpClient) {
           _classCallCheck(this, GetListaPastasService);
 
           this.httpClient = httpClient;
-          this.url = //"http://localhost:3000/lista_pastas";
-          "https://docker-2-julian.herokuapp.com/lista_pastas"; // Headers
+          this.url = "http://localhost:3000/lista_pastas"; // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
@@ -1262,6 +1262,7 @@
         _createClass(GetListaPastasService, [{
           key: "getUrl_imagem",
           value: function getUrl_imagem(etiqueta) {
+            console.log("getUrl_imagem(etiqueta: String): Observable<String[]> {");
             return this.httpClient.get(this.url + etiqueta).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError));
           } // Manipulação de erros
 
