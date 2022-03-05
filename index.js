@@ -206,7 +206,7 @@ function lista_fotos_novas(eq, res, next)
     const filesNames = dirents.filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
-    const base_url="http://${HOST}:${PORT}/"+url_FOTOS_novas;;
+    const base_url=`http://${HOST}:${PORT}/`+url_FOTOS_novas;
 
     //const base_url="http://18.231.69.246:3000/"+url_FOTOS_novas;
 
@@ -294,7 +294,7 @@ function lista_pastas(req, res, next) {
 
 function entregando_index(req, res, next) {
 
-console.log(req.path+"  entregandoIndex "+HOST);
+
     
     var dir = path.join(__dirname, local_index); 
     
@@ -306,7 +306,7 @@ console.log(req.path+"  entregandoIndex "+HOST);
 
     var type = mime[path.extname(file).slice(1)] || 'text/plain';
 
-    
+console.log(req.path+"  entregandoIndex "+HOST+"   "+file);    
 //Envio do arquivo por PIPE
     var stream_pastas_locais = fs.createReadStream(file);
 
