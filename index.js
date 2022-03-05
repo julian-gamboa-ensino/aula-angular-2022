@@ -264,7 +264,7 @@ function entregando_novos_png(req, res, next) {
 
 function lista_pastas(req, res, next) {   
     
-    console.log("lista_pastas Muito Delay");
+    //console.log("lista_pastas Muito Delay");
 
     const completo_pasta_FOTOS = path.join(__dirname, pasta_ETIQUETAS);     
     const dirents = fs.readdirSync(completo_pasta_FOTOS, { withFileTypes: true });    

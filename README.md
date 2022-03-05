@@ -1,5 +1,7 @@
 # Aula básica de Angular (laboratório 1)
 
+testando o ip da Ec2 
+
 console.log("lista_pastas Muito Delay"
 
 Estranho: existem problemas com um componente de nome `list.component.ts`

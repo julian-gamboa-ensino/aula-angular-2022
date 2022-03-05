@@ -1038,7 +1038,8 @@
           _classCallCheck(this, GetFotosBucketService);
 
           this.httpClient = httpClient;
-          this.url = "http://localhost:3000/"; // Headers
+          this.url = "http://18.231.69.246:3000"; //"http://localhost:3000/";
+          // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
@@ -1249,7 +1250,8 @@
           _classCallCheck(this, GetListaPastasService);
 
           this.httpClient = httpClient;
-          this.url = "http://localhost:3000/lista_pastas"; // Headers
+          this.url = "http://18.231.69.246:3000"; //"http://localhost:3000/lista_pastas";
+          // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
