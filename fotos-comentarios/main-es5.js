@@ -135,7 +135,7 @@
         selectors: [["app-lista-pastas"]],
         decls: 10,
         vars: 1,
-        consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "bg-dark", "fixed-top"], ["id", "navbarsExampleDefault", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item", "dropdown"], ["href", "", "id", "dropdown01", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["aria-labelledby", "dropdown01", 1, "dropdown-menu"], ["href", "./sabado/sabado", 1, "dropdown-item"], [4, "ngFor", "ngForOf"], [1, "dropdown-item", 3, "href"]],
+        consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "bg-dark", "fixed-top"], ["id", "navbarsExampleDefault", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item", "dropdown"], ["href", "", "id", "dropdown01", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["aria-labelledby", "dropdown01", 1, "dropdown-menu"], ["href", "./amanha/amanha", 1, "dropdown-item"], [4, "ngFor", "ngForOf"], [1, "dropdown-item", 3, "href"]],
         template: function ListaPastasComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
