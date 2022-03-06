@@ -1032,14 +1032,15 @@
 
 
       var GetFotosBucketService = /*#__PURE__*/function () {
+        //"http://18.231.69.246:3000/"; 
+        //"http://localhost:3000/";
         //"https://docker-2-julian.herokuapp.com/";
         // injetando o HttpClient
         function GetFotosBucketService(httpClient) {
           _classCallCheck(this, GetFotosBucketService);
 
           this.httpClient = httpClient;
-          this.url = "http://18.231.69.246:3000/"; //"http://localhost:3000/";
-          // Headers
+          this.url = "/"; // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
@@ -1244,14 +1245,15 @@
 
 
       var GetListaPastasService = /*#__PURE__*/function () {
+        //"http://18.231.69.246:3000/lista_pastas"; 
+        //"http://localhost:3000/lista_pastas";
         //"https://docker-2-julian.herokuapp.com/lista_pastas";
         // injetando o HttpClient
         function GetListaPastasService(httpClient) {
           _classCallCheck(this, GetListaPastasService);
 
           this.httpClient = httpClient;
-          this.url = "http://18.231.69.246:3000/lista_pastas"; //"http://localhost:3000/lista_pastas";
-          // Headers
+          this.url = "/lista_pastas"; // Headers
 
           this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
