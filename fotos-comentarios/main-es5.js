@@ -17,7 +17,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /home/julian/Desktop/march_01/aula-angular-2022/maquina-antiga/src/main.ts */
+      /*! /home/julian/Desktop/heroku/gestor_fotos/maquina-antiga/src/main.ts */
       "zUnb");
       /***/
     },
