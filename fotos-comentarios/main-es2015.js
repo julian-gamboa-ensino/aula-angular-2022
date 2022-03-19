@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/EC2_maquina-antiga/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /home/julian/Desktop/march_01/aula-angular-2022/maquina-antiga/src/main.ts */"zUnb");
 
 
 /***/ }),
@@ -72,7 +72,7 @@ ListaPastasComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "novas fotos");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "novo");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, ListaPastasComponent_li_9_Template, 3, 3, "li", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -154,7 +154,7 @@ class NovosComponent {
         this.imagem = [];
     }
     /*
-    Quando for procurado (https://docker-2-julian.erokuapp.com/saida_oficina/saida_oficina)
+    Quando for procurado (https://docker-2-julian.herokuapp.com/saida_oficina/saida_oficina)
     ele vai coletar o parametro da URL
     
     (  { path: ':parametro/:parametro'<----------------------------,
@@ -216,7 +216,7 @@ class NovosComponent {
 NovosComponent.ɵfac = function NovosComponent_Factory(t) { return new (t || NovosComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_get_fotos_bucket_service__WEBPACK_IMPORTED_MODULE_2__["GetFotosBucketService"])); };
 NovosComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NovosComponent, selectors: [["app-novos"]], hostBindings: function NovosComponent_HostBindings(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function NovosComponent_keyup_HostBindingHandler($event) { return ctx.keyEvent($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
-    } }, decls: 85, vars: 28, consts: [["id", "navbarHeader", 1, "bg-dark", "collapse"], [1, "container"], [1, "row"], [1, "col-sm-8", "col-md-7", "py-4"], [1, "text-white"], [1, "text-muted"], [1, "col-sm-4", "offset-md-1", "py-4"], [1, "list-unstyled"], ["href", "https://github.com/julian-gamboa-bahia", 1, "text-white"], ["href", "https://github.com/julian-gamboa-ensino", 1, "text-white"], ["href", "https://www.linkedin.com/in/julian-gamboa-bahia/", 1, "text-white"], [1, "navbar", "navbar-dark", "bg-dark", "box-shadow"], [1, "container", "d-flex", "justify-content-between"], ["href", "https://docker-2-julian.erokuapp.com", 1, "navbar-brand", "d-flex", "align-items-center"], ["xmlns", "http://www.w3.org/2000/svg", "width", "20", "height", "20", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round", 1, "mr-2"], ["d", "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"], ["cx", "12", "cy", "13", "r", "4"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarHeader", "aria-controls", "navbarHeader", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler", "collapsed"], [1, "navbar-toggler-icon"], ["role", "main"], [1, "album", "py-5", "bg-light"], [1, "col-md-4"], [1, "card", "mb-4", "box-shadow"], ["id", "imagem-1", "alt", "Image 1", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], [3, "nome_imagem", "etiqueta_imagem"], ["id", "imagem-2", "alt", "Image 2", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-3", "alt", "Image 3", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-4", "alt", "Image 4", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-5", "alt", "Image 5", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-6", "alt", "Image 6", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-7", "alt", "Image 7", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-8", "alt", "Image 8", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-9", "alt", "Image 9", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["href", "https://github.com/julian-gamboa-ensino/node-gestor-imagens"]], template: function NovosComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 85, vars: 28, consts: [["id", "navbarHeader", 1, "bg-dark", "collapse"], [1, "container"], [1, "row"], [1, "col-sm-8", "col-md-7", "py-4"], [1, "text-white"], [1, "text-muted"], [1, "col-sm-4", "offset-md-1", "py-4"], [1, "list-unstyled"], ["href", "https://github.com/julian-gamboa-bahia", 1, "text-white"], ["href", "https://github.com/julian-gamboa-ensino", 1, "text-white"], ["href", "https://www.linkedin.com/in/julian-gamboa-bahia/", 1, "text-white"], [1, "navbar", "navbar-dark", "bg-dark", "box-shadow"], [1, "container", "d-flex", "justify-content-between"], ["href", "https://docker-2-julian.herokuapp.com", 1, "navbar-brand", "d-flex", "align-items-center"], ["xmlns", "http://www.w3.org/2000/svg", "width", "20", "height", "20", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round", 1, "mr-2"], ["d", "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"], ["cx", "12", "cy", "13", "r", "4"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarHeader", "aria-controls", "navbarHeader", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler", "collapsed"], [1, "navbar-toggler-icon"], ["role", "main"], [1, "album", "py-5", "bg-light"], [1, "col-md-4"], [1, "card", "mb-4", "box-shadow"], ["id", "imagem-1", "alt", "Image 1", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], [3, "nome_imagem", "etiqueta_imagem"], ["id", "imagem-2", "alt", "Image 2", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-3", "alt", "Image 3", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-4", "alt", "Image 4", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-5", "alt", "Image 5", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-6", "alt", "Image 6", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-7", "alt", "Image 7", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-8", "alt", "Image 8", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["id", "imagem-9", "alt", "Image 9", 1, "card-img-top", 2, "height", "225px", "width", "100%", "display", "block", 3, "src"], ["href", "https://github.com/julian-gamboa-ensino/node-gestor-imagens"]], template: function NovosComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
@@ -230,7 +230,7 @@ NovosComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "\nvisualiza\u00E7\u00E3o de notas fiscais, multas, etc..");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "\nDemo em Ec2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "\nDemo em Heroku");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -531,13 +531,12 @@ __webpack_require__.r(__webpack_exports__);
 Serviço SIMPLES para consultar uma API que lista-se as fotos contidas num bucker
 */
 class GetFotosBucketService {
-    //"http://18.231.69.246:3000/"; 
-    //"http://localhost:3000/";
-    //"https://docker-2-julian.herokuapp.com/";
     // injetando o HttpClient
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.url = "/";
+        this.url = 
+        //"http://localhost:31/";
+        "https://docker-2-julian.herokuapp.com/";
         // Headers
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': 'application/json' })
@@ -645,13 +644,12 @@ __webpack_require__.r(__webpack_exports__);
 Serviço SIMPLES para consultar uma API que lista-se as fotos contidas num bucker
 */
 class GetListaPastasService {
-    //"http://18.231.69.246:3000/lista_pastas"; 
-    //"http://localhost:3000/lista_pastas";
-    //"https://docker-2-julian.herokuapp.com/lista_pastas";
     // injetando o HttpClient
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.url = "/lista_pastas";
+        this.url = 
+        //  "http://localhost:31/lista_pastas";
+        "https://docker-2-julian.herokuapp.com/lista_pastas";
         // Headers
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': 'application/json' })
@@ -659,7 +657,6 @@ class GetListaPastasService {
     }
     // Obtem todos os carros
     getUrl_imagem(etiqueta) {
-        console.log("getUrl_imagem(etiqueta: String): Observable<String[]> {");
         return this.httpClient.get(this.url + etiqueta)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError));
     }

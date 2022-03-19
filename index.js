@@ -9,8 +9,6 @@ const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./swagger.yaml');
 
-
-
 /******************************************************
 Funcionalidades próprias do sistema
 *******************************************************/
@@ -29,7 +27,7 @@ var app = express();
 
 
 const PORT = process.env.PORT || 3000;
-var HOST = '0.0.0.0';
+const HOST = '0.0.0.0';
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -88,19 +86,10 @@ function getFiles (dir, files_){
     }
     return files_;
 }
-
-
-function obtendo_ip_maquina() {
-    const myArgs = process.argv.slice(2);
-    //console.log('myArgs: ', myArgs);
-    HOST = myArgs[0];
-    console.log(HOST);
-}
-
+  
 ///////////////////////// Rotas /////////////////////////////
 
 /////////////////////// Colocando de forma dinâmica os ENDPOINTS ////
-obtendo_ip_maquina();
 ENDPOINTS();
 
 function ENDPOINTS() {
@@ -167,13 +156,11 @@ function lista_fotos_etiquetas(req, res, next) {
 
     pasta_especifica = path.join(completo_pasta_FOTOS,nome_etiqueta); 
     
-    //const base_url="http://18.231.69.246:3000/";
+    //const base_url="http://localhost:31/"; //${PORT}
 
-    //const base_url="http://localhost:3000/"; //${PORT}
+    //const base_url=`http://${HOST}:${PORT}`;
 
-    const base_url=`http://${HOST}:${PORT}/`;
-
-    //const base_url=`https://docker-2-julian.herokuapp.com/`;
+    const base_url=`https://docker-2-julian.herokuapp.com/`;
 
     lista_arquivos=getFiles(pasta_especifica).map(
         function(endereco_local) {
@@ -206,11 +193,9 @@ function lista_fotos_novas(eq, res, next)
     const filesNames = dirents.filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
-    const base_url=`http://${HOST}:${PORT}/`+url_FOTOS_novas;
+    //const base_url="http://localhost:3001/"+url_FOTOS_novas;
 
-    //const base_url="http://18.231.69.246:3000/"+url_FOTOS_novas;
-
-    //const base_url="https://docker-2-julian.herokuapp.com/"+url_FOTOS_novas;
+    const base_url="https://docker-2-julian.herokuapp.com/"+url_FOTOS_novas;
     
     lista_arquivos=[];
 
@@ -277,9 +262,7 @@ function entregando_novos_png(req, res, next) {
 *******************************************************/
 
 
-function lista_pastas(req, res, next) {   
-    
-    //console.log("lista_pastas Muito Delay");
+function lista_pastas(req, res, next) {    
 
     const completo_pasta_FOTOS = path.join(__dirname, pasta_ETIQUETAS);     
     const dirents = fs.readdirSync(completo_pasta_FOTOS, { withFileTypes: true });    
@@ -294,7 +277,7 @@ function lista_pastas(req, res, next) {
 
 function entregando_index(req, res, next) {
 
-
+//console.log(req.path)
     
     var dir = path.join(__dirname, local_index); 
     
@@ -306,7 +289,7 @@ function entregando_index(req, res, next) {
 
     var type = mime[path.extname(file).slice(1)] || 'text/plain';
 
-console.log(req.path+"  entregandoIndex "+HOST+"   "+file);    
+    
 //Envio do arquivo por PIPE
     var stream_pastas_locais = fs.createReadStream(file);
 
@@ -526,7 +509,7 @@ http://${HOST}:${PORT}`);
  */
 
 
-app.listen(PORT, "0.0.0.0");
+app.listen(PORT, HOST);
 
 console.log(`Running on http://${HOST}:${PORT}`);
 
